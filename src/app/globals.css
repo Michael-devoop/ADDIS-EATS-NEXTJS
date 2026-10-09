@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --primary-green: #0c5836;
+  --primary-dark: #084228;
+  --primary-light: #e8f5ed;
+  --accent-green: #10b981;
+  --bg-page: #faf9f5;
+  --card-bg: #ffffff;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --border-subtle: #eae8e1;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.btn-primary,
+.btn-green {
+  background-color: var(--primary-green) !important;
+  color: #ffffff !important;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-green:hover {
+  background-color: var(--primary-dark) !important;
+  box-shadow: 0 4px 14px rgba(12, 88, 54, 0.28);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active,
+.btn-green:active {
+  transform: translateY(0);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4, [id] {
+  scroll-margin-top: 5.5rem;
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+}
+
+.animate-float {
+  animation: floatSoft 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
