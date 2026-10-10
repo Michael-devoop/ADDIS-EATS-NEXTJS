@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getDishes } from "@/lib/dishes";
 import { toSlug } from "../slug";
 import AddToCartButton from "../AddToCartButton";
+import { getSiteUrl } from "@/lib/site";
 
 export async function generateStaticParams() {
   const dishes = await getDishes();
@@ -69,7 +70,7 @@ export default async function DishPage({ params }) {
     notFound();
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://addis-eats.vercel.app";
+  const siteUrl = getSiteUrl();
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MenuItem",

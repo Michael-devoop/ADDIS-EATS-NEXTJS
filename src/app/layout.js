@@ -8,13 +8,16 @@ import UserMenu from "@/components/auth/UserMenu";
 import { getSession } from "@/lib/session";
 import "./globals.css";
 
+import { getSiteUrl } from "@/lib/site";
+
 const sansFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
+  adjustFontFallback: false,
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://addis-eats.vercel.app";
+const siteUrl = getSiteUrl();
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -45,11 +48,21 @@ export const metadata = {
     siteName: "Addis Eats",
     title: "Addis Eats | Authentic Organic Ethiopian Dining & Delivery",
     description: "Experience handcrafted traditional Ethiopian cuisine, fresh wats, sizzling tibs, and natural juices delivered fresh across Addis Ababa.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Addis Eats — Authentic Organic Ethiopian Dining & Delivery",
+        type: "image/png",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Addis Eats | Authentic Organic Ethiopian Dining & Delivery",
     description: "Experience handcrafted traditional Ethiopian cuisine, fresh wats, sizzling tibs, and natural juices delivered fresh across Addis Ababa.",
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,

@@ -1,5 +1,7 @@
+import { getSiteUrl } from "@/lib/site";
+
 export default function robots() {
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL || "https://addis-eats.vercel.app";
+  const siteUrl = getSiteUrl();
 
   return {
     rules: [

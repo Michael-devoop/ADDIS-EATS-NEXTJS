@@ -7,7 +7,7 @@
 
 ## 🚀 Live Deployed Application
 
-- **Live Production URL**: [https://addis-eats.vercel.app](https://addis-eats.vercel.app)
+- **Live Production URL**: [https://addis-eats-nextjs-cyan.vercel.app](https://addis-eats-nextjs-cyan.vercel.app)
 - **Capstone GitHub Repository**: [https://github.com/Michaelabebe/IBT](https://github.com/Michaelabebe/IBT)
 - **Module Path**: `sq2-michael-abebe/module-03-react-nextjs/Days/Day_45/addis_eats`
 

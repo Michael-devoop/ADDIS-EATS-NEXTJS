@@ -14,6 +14,20 @@ export const metadata = {
     title: "Full Menu & Specials | Addis Eats",
     description: "Explore the complete Addis Eats menu featuring authentic wats, sizzling tibs, vegetarian fasting platters, and natural juices.",
     url: "/menu",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Addis Eats Full Menu & Specials",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Full Menu & Specials | Addis Eats",
+    description: "Explore the complete Addis Eats menu featuring authentic wats, sizzling tibs, vegetarian fasting platters, and natural juices.",
+    images: ["/opengraph-image"],
   },
 };
 
