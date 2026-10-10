@@ -58,13 +58,12 @@ export default async function HomePage() {
 
               <div className="relative w-64 h-64 sm:w-80 sm:h-80 mx-auto flex items-center justify-center motion-safe:animate-float">
                 <Image
-                  src="/images/main-hero.png"
+                  src="/images/main-hero.svg"
                   alt="Signature Addis Eats Ethiopian dining feast featuring hot wats, injera, and sizzling tibs"
                   width={480}
                   height={480}
                   priority={true}
-                  quality={85}
-                  sizes="(max-width: 640px) 256px, (max-width: 1024px) 320px, 480px"
+                  unoptimized={true}
                   className="object-contain w-full h-full drop-shadow-2xl"
                 />
               </div>
