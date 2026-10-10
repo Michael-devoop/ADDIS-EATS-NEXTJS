@@ -14,7 +14,6 @@ const sansFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
-  adjustFontFallback: false,
 });
 
 const siteUrl = getSiteUrl();
@@ -101,7 +100,6 @@ export default async function RootLayout({ children }) {
                     width={40}
                     height={40}
                     sizes="40px"
-                    priority
                     className="w-full h-full object-contain"
                   />
                 </div>

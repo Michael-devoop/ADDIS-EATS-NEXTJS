@@ -1,12 +1,12 @@
 export const dishes = [
   {
     id: "d1",
-    name: "Crispy Sambusa",
-    price: 100,
-    category: "Starters",
+    name: "Pizza",
+    price: 2500,
+    category: "Mains",
     image: "/images/cat-p.png",
-    alt: "Golden crispy Ethiopian lentil and spiced vegetable sambusa with flaky pastry crust",
-    description: "Crisp hand-folded pastry triangles stuffed with spiced highland lentils, scallions, and jalapeño."
+    alt: "Delicious Pizza",
+    description: "Delicious Pizza with vegetables of your choice"
   },
   {
     id: "d2",
@@ -28,12 +28,12 @@ export const dishes = [
   },
   {
     id: "d4",
-    name: "Honey Baklava",
+    name: "buna",
     price: 250,
-    category: "Desserts",
+    category: "Drinks",
     image: "/images/catd.png",
-    alt: "Crispy layered honey baklava pastry infused with crushed walnuts and highland wildflower honey",
-    description: "Delicate layers of golden filo pastry packed with roasted walnuts, cinnamon, and bathed in pure mountain wildflower honey."
+    alt: "Freshly roasted ethiopian coffee beans, brewed using traditional tools",
+    description: "Freshly roasted ethiopian coffee beans, brewed using traditional tools"
   },
   {
     id: "d5",
@@ -61,15 +61,6 @@ export const dishes = [
     image: "/images/beyaynet.png",
     alt: "Colorful vegan Yetsom Beyaynet fasting platter featuring gomen, misir wat, and fresh teff injera",
     description: "A vibrant sampler of slow-simmered yellow split peas, spicy red lentils, collard greens, and cabbage served over teff injera."
-  },
-  {
-    id: "d8",
-    name: "Spiced Tej Honey Wine",
-    price: 300,
-    category: "Drinks",
-    image: "/images/catd.png",
-    alt: "Traditional Ethiopian fermented spiced honey wine served chilled in an authentic glass berele",
-    description: "Golden honey wine traditionally brewed with gesho hops and filtered mountain water, with a balanced sweet and crisp finish."
   }
 ];
 
