@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import fs from "node:fs/promises";
+import path from "node:path";
 import { getDishes } from "@/lib/dishes";
 import { toSlug } from "../slug";
 
@@ -18,6 +20,15 @@ export default async function Image({ params }) {
     price: 350,
     description: "Experience handcrafted traditional Ethiopian cuisine delivered fresh across Addis Ababa.",
   };
+
+  let logoBase64 = "";
+  try {
+    const logoPath = path.join(process.cwd(), "public", "images", "logo.png");
+    const logoBuffer = await fs.readFile(logoPath);
+    logoBase64 = `data:image/png;base64,${logoBuffer.toString("base64")}`;
+  } catch (err) {
+    console.error("Failed to load logo in menu opengraph-image:", err);
+  }
 
   return new ImageResponse(
     (
@@ -45,20 +56,37 @@ export default async function Image({ params }) {
             width: "100%",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
             <div
               style={{
-                width: "56px",
-                height: "56px",
+                width: "60px",
+                height: "60px",
                 borderRadius: "50%",
-                backgroundColor: "#10b981",
+                backgroundColor: "#ffffff",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "30px",
+                border: "2px solid #10b981",
+                overflow: "hidden",
+                boxShadow: "0 6px 16px rgba(0, 0, 0, 0.2)",
               }}
             >
-              🌿
+              {logoBase64 ? (
+                <img
+                  src={logoBase64}
+                  alt="Addis Eats Logo"
+                  width="60"
+                  height="60"
+                  style={{
+                    width: "60px",
+                    height: "60px",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                  }}
+                />
+              ) : (
+                <span style={{ fontSize: "30px" }}>🌼</span>
+              )}
             </div>
             <span style={{ fontSize: "38px", fontWeight: "900", letterSpacing: "-1px" }}>
               Addis<span style={{ color: "#a7f3d0" }}>Eats</span>
